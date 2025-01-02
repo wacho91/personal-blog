@@ -40,7 +40,12 @@ const Home = () => {
 
   return (
     <div>
-        Home Component
+        {/* Search */}
+        <Search selectedTag={(tag)=>filterPost(tag)} />
+        {/* IntroPost */}
+        {posts.length>0? <IntroPost post={posts[0]} />:null}
+        {/* Blogs */}
+        {posts.length>0?  <Blogs posts={posts}/>:null}
     </div>
   )
 }
